@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply font-sans transition-colors duration-300;
+  }
+
+  /* Light mode defaults */
+  body {
+    @apply bg-light-bg text-text-light-primary;
+  }
+
+  .dark body {
+    @apply bg-dark-bg text-text-dark-primary;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-light-bg;
+  }
+
+  .dark ::-webkit-scrollbar-track {
+    @apply bg-dark-bg;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-accent/40 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-accent/60;
+  }
+
+  /* Custom scrollbar for modal content */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-accent/30 rounded-full;
+  }
+}
+
+@layer components {
+  /* Glassmorphism card */
+  .glass {
+    @apply bg-white/50 backdrop-blur-md border border-light-border;
+  }
+
+  .dark .glass {
+    @apply bg-dark-card/50 backdrop-blur-md border border-dark-border;
+  }
+
+  /* Accent text — solid warm color instead of gradient */
+  .gradient-text {
+    @apply text-accent font-bold;
+  }
+
+  /* Section padding */
+  .section-padding {
+    @apply py-16 md:py-24 px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Max width container */
+  .container-custom {
+    @apply max-w-6xl mx-auto px-4 sm:px-6;
+  }
+
+  /* Card base */
+  .card {
+    @apply bg-light-card border border-light-border rounded-2xl p-6 
+           transition-all duration-300 hover:-translate-y-1;
+  }
+
+  .dark .card {
+    @apply bg-dark-card border border-dark-border;
+  }
+
+  /* Subtle warm hover glow */
+  .hover-glow {
+    @apply transition-all duration-300 hover:shadow-md hover:shadow-accent/10 hover:border-accent/30 dark:hover:border-accent/30;
+  }
+
+  /* Dot background pattern */
+  .dot-pattern {
+    background-image: radial-gradient(circle, #b07c4f10 1px, transparent 1px);
+    background-size: 30px 30px;
+  }
+
+  .dark .dot-pattern {
+    background-image: radial-gradient(circle, #b07c4f12 1px, transparent 1px);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
