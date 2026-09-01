@@ -12,7 +12,7 @@ export const devProjects = [
     images: [],
   },
   {
-    title: 'MyDei Simple Social Media Website',
+    title: 'MyDei: Simple Social Media Website',
     description:
       'A social networking platform enabling seamless user interaction and real-time feed updates. Features include Posting, Reacting, Messaging, Friends, Comments, and Reposting.',
     tags: ['React.js', 'Supabase'],
@@ -37,7 +37,7 @@ export const devProjects = [
     images: ['/Imagess/screenshot20260428172244.png', '/Imagess/screenshot20260428172303.png'],
   },
   {
-    title: 'Full-Stack E-Commerce Platform',
+    title: '7-Evelyn: Full-Stack E-Commerce Platform',
     description:
       'Web application featuring full product catalogs, a dynamic state-managed shopping cart, and user checkout.',
     tags: ['React.js', 'MySQL'],

@@ -36,7 +36,7 @@ export default function About() {
                 {/* Quote Box */}
                 <div className="absolute -bottom-6 -left-8 md:-left-12 z-20 bg-[#F4F2EC] dark:bg-dark-card p-5 md:p-6 shadow-xl rounded-tl-[2rem] rounded-bl-[2rem] rounded-br-[2rem] rounded-tr-none max-w-[90%] md:max-w-[85%] border border-white/60 dark:border-dark-border">
                   <span className="text-4xl text-[#C0562F] font-serif leading-none block mb-1">“</span>
-                  <p className="text-sm md:text-base font-serif font-medium text-gray-700 dark:text-gray-300 leading-snug">
+                  <p className="text-sm md:text-base font-sans font-light italic text-gray-700 dark:text-gray-300 leading-snug">
                     If it scares you, it might be a good thing to try.
                   </p>
                 </div>

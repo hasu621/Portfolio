@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { HiOutlinePhotograph } from 'react-icons/hi';
 import DevProjects from '../components/sections/DevProjects';
 import AutomationProjects from '../components/sections/AutomationProjects';
 import { automationProjects } from '../data/projects';
@@ -74,7 +75,7 @@ export default function Projects() {
                     <AutomationProjects />
                   ) : (
                     <div className="flex flex-col items-center justify-center py-20 text-center">
-                      <span className="text-6xl mb-4 opacity-50">🤖</span>
+                      <HiOutlinePhotograph className="w-16 h-16 mb-4 opacity-30 text-accent" />
                       <h3 className="text-2xl font-bold text-text-light-secondary dark:text-text-dark-secondary mb-2">
                         No automation projects yet.
                       </h3>

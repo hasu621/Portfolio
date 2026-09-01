@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { HiOutlinePhotograph } from 'react-icons/hi';
 import Badge from './Badge';
 
 export default function ProjectCard({ project, index, onClick }) {
@@ -23,9 +24,7 @@ export default function ProjectCard({ project, index, onClick }) {
             />
           ) : (
             <div className="w-full h-full flex items-center justify-center">
-              <div className="text-5xl opacity-30">
-                {project.icon || '🚀'}
-              </div>
+              <HiOutlinePhotograph className="w-16 h-16 opacity-30 text-accent" />
             </div>
           )}
 
