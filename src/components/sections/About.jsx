@@ -23,14 +23,22 @@ export default function About() {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6 }}
           >
-              <div className="relative w-64 h-72 md:w-72 md:h-80">
+              <div className="relative w-64 h-80 md:w-72 md:h-96 mt-6 md:mt-0">
                 {/* Image Container */}
-                <div className="absolute inset-0 rounded-[2rem] overflow-hidden shadow-sm bg-light-bg dark:bg-dark-bg border border-light-border dark:border-dark-border z-10">
+                <div className="absolute inset-0 rounded-tl-[4rem] rounded-br-[4rem] overflow-hidden shadow-sm bg-light-bg dark:bg-dark-bg border border-light-border dark:border-dark-border z-10">
                   <img
                     src="/about-profile.png"
                     alt="Karl Rico C. Calingal"
                     className="w-full h-full object-cover object-top"
                   />
+                </div>
+                
+                {/* Quote Box */}
+                <div className="absolute -bottom-6 -left-8 md:-left-12 z-20 bg-[#F4F2EC] dark:bg-dark-card p-5 md:p-6 shadow-xl rounded-tl-[2rem] rounded-bl-[2rem] rounded-br-[2rem] rounded-tr-none max-w-[90%] md:max-w-[85%] border border-white/60 dark:border-dark-border">
+                  <span className="text-4xl text-[#C0562F] font-serif leading-none block mb-1">“</span>
+                  <p className="text-sm md:text-base font-serif font-medium text-gray-700 dark:text-gray-300 leading-snug">
+                    If it scares you, it might be a good thing to try.
+                  </p>
                 </div>
               </div>
           </motion.div>
