@@ -62,4 +62,17 @@ export const devProjects = [
   },
 ];
 
-export const automationProjects = [];
+export const automationProjects = [
+  {
+    title: 'AI Inbox Triage & Action Queue',
+    description: 'Built an AI-powered email operations workflow that automatically captures incoming Gmail messages, prevents duplicate processing, classifies and prioritizes emails with Gemini, validates structured AI output, and writes actionable intelligence to a centralized Google Sheets queue.',
+    fullDescription: 'Built an AI-powered email operations workflow that automatically captures incoming Gmail messages, prevents duplicate processing, classifies and prioritizes emails with Gemini, validates structured AI output, and writes actionable intelligence to a centralized Google Sheets queue. Designed with human-in-the-loop controls, deterministic routing, duplicate prevention, and auditability to demonstrate safe, production-minded AI automation.\n\nProject Overview\nDesigned and built an end-to-end AI-powered email triage and action-queue system using n8n, Gmail, Google Sheets, and Google Gemini.\n\nThe automation monitors incoming emails, retrieves the full message, prevents duplicate processing, uses Gemini to classify and prioritize the email, validates the AI-generated result, and records the structured intelligence in a centralized Google Sheets action queue. The system is designed around a human-in-the-loop architecture, ensuring that AI is used for interpretation and classification while deterministic automation controls workflow decisions and consequential actions.\n\nWorkflow\nGmail → Duplicate Detection → Gemini AI Classification → JSON Parsing → Validation → Google Sheets Action Queue → Gmail Labeling → Human Review\n\nKey Capabilities\n• Automated Gmail monitoring — captures incoming emails through an n8n Gmail trigger.\n• Duplicate prevention — checks the email\'s unique Gmail Message ID against the existing action queue before processing.\n• AI-powered classification — Gemini analyzes email content and identifies: Category, Priority, Action required, Suggested action, Deadline, Summary, Confidence score.\n• Structured AI output — converts Gemini\'s JSON response into usable n8n data rather than relying on unstructured text.\n• AI output validation — verifies required fields and confidence levels before allowing the result into the main workflow.\n• Centralized action queue — stores every processed email in Google Sheets with a consistent schema and review status.\n• Gmail organization — applies automation labels to processed messages.\n• Human approval workflow — keeps consequential decisions under human control rather than allowing AI to independently send or execute arbitrary actions.\n• Auditability — maintains message IDs, timestamps, classifications, statuses, and processing information for traceability.\n\nAutomation Principles Demonstrated\n• Trigger → Data → Decision → Action architecture\n• Idempotency and duplicate prevention\n• Structured data contracts\n• AI output validation\n• Deterministic workflow logic\n• Human-in-the-loop controls\n• Untrusted-input handling and prompt-injection awareness\n• Centralized source-of-truth tracking\n• Error/review paths instead of silent failures\n• Auditability and operational visibility\n• Safe separation between AI interpretation and real-world actions',
+    tags: ['n8n', 'Gmail', 'Gemini', 'Google Sheets'],
+    category: 'Automation Workflow',
+    icon: '⚡',
+    liveUrl: null,
+    githubUrl: null,
+    image: '/Imagess/screenshot20260903041233.png',
+    images: ['/Imagess/screenshot20260903041233.png'],
+  }
+];

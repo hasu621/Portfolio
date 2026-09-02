@@ -1,7 +1,7 @@
 import {
   SiReact, SiJavascript, SiTypescript, SiHtml5, SiCss, SiTailwindcss,
   SiC, SiCplusplus, SiMysql,
-  SiGooglesheets
+  SiGooglesheets, SiN8N
 } from 'react-icons/si';
 import { FaFileExcel } from 'react-icons/fa';
 
@@ -32,6 +32,7 @@ export const skillCategories = [
       { name: 'Microsoft Excel', icon: FaFileExcel, color: '#217346' },
       { name: 'Google Sheets', icon: SiGooglesheets, color: '#34A853' },
       { name: 'Zoho Sheets', icon: SiGooglesheets, color: '#14AEEF' },
+      { name: 'n8n', icon: SiN8N, color: '#FF6D5A' },
     ],
   },
   {

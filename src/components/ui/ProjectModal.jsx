@@ -220,7 +220,7 @@ export default function ProjectModal({ project, onClose }) {
                 About this Project
               </h3>
               <p className="text-text-light-secondary dark:text-text-dark-secondary leading-relaxed whitespace-pre-wrap text-sm sm:text-base">
-                {project.description}
+                {project.fullDescription || project.description}
               </p>
             </div>
 

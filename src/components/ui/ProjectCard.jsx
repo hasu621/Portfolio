@@ -41,18 +41,23 @@ export default function ProjectCard({ project, index, onClick }) {
                          group-hover:text-accent transition-colors duration-300">
             {project.title}
           </h3>
-          <p className="text-text-light-secondary dark:text-text-dark-secondary text-sm leading-relaxed mb-4 flex-grow">
+          <p className="text-text-light-secondary dark:text-text-dark-secondary text-sm leading-relaxed mb-4 flex-grow line-clamp-3">
             {project.description}
           </p>
 
-          {/* Impact metric for automation projects */}
-          {project.impact && (
-            <div className="mt-auto px-3 py-2 rounded-lg bg-accent-secondary/10 border border-accent-secondary/20 inline-block w-fit">
-              <span className="text-sm font-medium text-accent-secondary">
-                ⚡ {project.impact}
-              </span>
-            </div>
-          )}
+          {/* Impact metric and View Button */}
+          <div className="mt-auto flex items-center justify-between">
+            {project.impact && (
+              <div className="px-3 py-2 rounded-lg bg-accent-secondary/10 border border-accent-secondary/20 inline-block w-fit">
+                <span className="text-sm font-medium text-accent-secondary">
+                  ⚡ {project.impact}
+                </span>
+              </div>
+            )}
+            <button className="text-accent text-sm font-medium hover:underline flex items-center gap-1 ml-auto">
+              Show full description <span aria-hidden="true">&rarr;</span>
+            </button>
+          </div>
         </div>
       </div>
     </motion.div>
