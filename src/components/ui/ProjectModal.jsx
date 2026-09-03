@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { HiX, HiExternalLink, HiCode, HiChevronLeft, HiChevronRight } from 'react-icons/hi';
+import { HiX, HiExternalLink, HiCode, HiChevronLeft, HiChevronRight, HiOutlinePhotograph } from 'react-icons/hi';
 import Badge from './Badge';
 
 export default function ProjectModal({ project, onClose }) {
@@ -84,7 +84,7 @@ export default function ProjectModal({ project, onClose }) {
           exit={{ opacity: 0, scale: 0.95, y: 20 }}
           transition={{ type: 'spring', damping: 25, stiffness: 300 }}
           onClick={(e) => e.stopPropagation()}
-          className="relative bg-light-card dark:bg-dark-card w-full max-w-4xl max-h-[90vh] rounded-2xl sm:rounded-3xl overflow-hidden flex flex-col shadow-2xl border border-light-border dark:border-dark-border"
+          className="relative bg-light-card dark:bg-dark-card w-full max-w-4xl h-[90vh] rounded-2xl sm:rounded-3xl overflow-hidden flex flex-col shadow-2xl border border-light-border dark:border-dark-border"
         >
           {/* Close Button */}
           <button
@@ -156,23 +156,23 @@ export default function ProjectModal({ project, onClose }) {
               )}
             </div>
           ) : (
-            <div className="relative h-40 sm:h-48 bg-accent/5 dark:bg-accent/10 flex items-center justify-center shrink-0">
-              <div className="text-6xl opacity-30">{project.icon || '🚀'}</div>
+            <div className="relative h-52 sm:h-72 md:h-[380px] bg-accent/5 dark:bg-accent/10 flex items-center justify-center shrink-0">
+              <HiOutlinePhotograph className="w-16 h-16 opacity-30 text-accent" />
             </div>
           )}
 
           {/* ═══════════ CONTENT SECTION ═══════════ */}
-          <div className="flex-1 overflow-y-auto custom-scrollbar">
+          <div className="flex-1 overflow-y-auto custom-scrollbar flex flex-col">
             
             {/* Header: Title + Category + Actions */}
-            <div className="px-5 sm:px-8 pt-6 pb-4 sm:pt-8 sm:pb-5">
+            <div className="px-5 sm:px-8 pt-6 pb-4 sm:pt-8 sm:pb-5 shrink-0">
               <span className="inline-block text-xs font-semibold uppercase tracking-wider text-accent mb-2 bg-accent/10 px-3 py-1 rounded-full">
                 {project.category}
               </span>
               <h2 className="font-serif text-xl sm:text-2xl md:text-3xl text-text-light-primary dark:text-text-dark-primary mb-4">
                 {project.title}
               </h2>
-
+              
               {/* Action Buttons */}
               <div className="flex flex-wrap gap-3">
                 {project.liveUrl ? (
@@ -203,10 +203,10 @@ export default function ProjectModal({ project, onClose }) {
             </div>
 
             {/* Divider */}
-            <div className="mx-5 sm:mx-8 h-px bg-light-border dark:bg-dark-border" />
+            <div className="mx-5 sm:mx-8 h-px bg-light-border dark:bg-dark-border shrink-0" />
 
             {/* Description */}
-            <div className="px-5 sm:px-8 py-5 sm:py-6">
+            <div className="px-5 sm:px-8 py-5 sm:py-6 grow">
               {/* Impact Metric */}
               {project.impact && (
                 <div className="mb-4 px-4 py-3 rounded-xl bg-accent/5 dark:bg-accent/10 border border-accent/15 inline-block">
@@ -225,7 +225,7 @@ export default function ProjectModal({ project, onClose }) {
             </div>
 
             {/* Technologies - Distinct bottom section */}
-            <div className="px-5 sm:px-8 py-5 sm:py-6 bg-light-bg dark:bg-dark-bg border-t border-light-border dark:border-dark-border">
+            <div className="mt-auto px-5 sm:px-8 py-5 sm:py-6 bg-light-bg dark:bg-dark-bg border-t border-light-border dark:border-dark-border shrink-0">
               <h3 className="text-sm font-semibold uppercase tracking-wider text-text-light-secondary dark:text-text-dark-secondary mb-3">
                 Technologies Used
               </h3>
